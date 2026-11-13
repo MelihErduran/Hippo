@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-tsc/
+native/ranker/build/
+*.log
+.DS_Store
+.claude/
+# packages/core/assets/hippo_ranker.wasm is committed on purpose (prebuilt C++ ranker)

@@ -1,0 +1,25 @@
+{
+  "provider": "anthropic",
+  "anthropic": {
+    "apiKeyCommand": "security find-generic-password -s hippo-anthropic -w",
+    "fastModel": "claude-haiku-5-5",
+    "smartModel": "claude-sonnet-5-5"
+  },
+  "mirrorDir": "~/Documents/Hippo",
+  "briefAt": "07:30",
+  "quietHours": { "start": "23:00", "end": "07:00" },
+  "nudges": {
+    "enabled": true,
+    "ladder": ["24h", "3h", "30m"],
+    "dailyCap": 8,
+    "startBuffer": 1.5
+  },
+  "schedule": {
+    "dayStart": "07:00",
+    "dayEnd": "23:00",
+    "blocks": [
+      { "days": ["mon", "wed", "fri"], "start": "09:00", "end": "10:00", "label": "Focus block" },
+      { "days": ["tue", "thu"], "start": "14:00", "end": "15:00", "label": "Meeting" }
+    ]
+  }
+}

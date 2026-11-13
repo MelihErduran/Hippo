@@ -1,0 +1,23 @@
+{
+  "name": "hippo-cli",
+  "version": "0.1.0",
+  "description": "Hippo: a terminal-first second brain for ADHD brains",
+  "type": "module",
+  "bin": {
+    "hippo": "dist/hippo.mjs"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@hippo/core": "0.1.0",
+    "commander": "^13.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0"
+  }
+}

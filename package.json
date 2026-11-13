@@ -1,0 +1,18 @@
+{
+  "name": "hippo-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/cli"
+  ],
+  "scripts": {
+    "build": "npm run build -w @hippo/core && npm run build -w hippo-cli",
+    "test": "npm test -w @hippo/core && make -C native/ranker test",
+    "typecheck": "tsc -p packages/core && tsc -p packages/cli --noEmit",
+    "wasm": "make -C native/ranker wasm"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
